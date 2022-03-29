@@ -1,6 +1,6 @@
 bash "restart_monit" do
     user "root"
     code <<-EOH
-    monit start all
+    monit restart all
     EOH
 end
