@@ -4,5 +4,4 @@ bash "restart_monit" do
     code <<-EOH
     monit start all
     EOH
-    end
-  end
+end
