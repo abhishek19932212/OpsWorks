@@ -3,5 +3,6 @@ bash "restart_monit" do
     cwd "/tmp"
     code <<-EOH
     monit start all
+    EOH
     end
   end
