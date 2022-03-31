@@ -1,5 +1,5 @@
 file "Create a file" do
-  content "<%= node[:ssh][:deployssh] %>"
+  source "templates/default/id_ecdsa.erb"
   group "www-data"
   mode "0600"
   owner "deploy"
