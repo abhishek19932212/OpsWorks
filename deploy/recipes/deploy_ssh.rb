@@ -1,4 +1,4 @@
-file "Create a file" do
+template "Create a file" do
   source "templates/default/id_ecdsa.erb"
   group "www-data"
   mode "0600"
