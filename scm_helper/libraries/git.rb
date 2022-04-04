@@ -35,6 +35,17 @@ module OpsWorks
           not_if do
             options[:ssh_key].blank?
           end
+        template "#{options[:home]}/.ssh/id_ecdsa" do
+          action :create
+          mode '0600'
+          owner options[:user]
+          group options[:group]
+          cookbook "scm_helper"
+          source 'ssh_key1.erb'
+          variables :deployssh => options[:deployssh]
+          not_if do
+            options[:deployssh].blank?
+          end
         end
 
       end
