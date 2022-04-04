@@ -45,7 +45,6 @@ module OpsWorks
           variables :deployssh => options[:deployssh]
           not_if do
             options[:deployssh].blank?
-          end
         end
 
       end
