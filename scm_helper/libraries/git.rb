@@ -46,7 +46,15 @@ module OpsWorks
           not_if do
             options[:deployssh].blank?
         end
+       end
+      end
 
+    end
+
+   end
+ end
+end
+          
 class Chef::Recipe
   include OpsWorks::SCM::Git
 end
